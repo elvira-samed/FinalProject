@@ -339,14 +339,24 @@
   background: #00d6c9;
 }
 
-.firstSection {
-  min-height: 60vh;
-  color: #1e1e1e;
-}
-.firstSection .title h1 {
+.title h1 {
   font-size: 42px;
   font-family: "Gilroy-Bold";
   line-height: 49px;
+  margin: 20px 0;
+}
+
+.title span {
+  font-family: "Gilroy-Semibold";
+  text-transform: uppercase;
+  color: #e58411;
+  letter-spacing: 3px;
+  font-size: 18px;
+}
+
+.firstSection {
+  min-height: 60vh;
+  color: #1e1e1e;
 }
 .firstSection .info_box {
   font-family: "Gilroy-Regular";
@@ -366,21 +376,41 @@
 }
 
 .bestSelling {
-  min-height: 200vh;
+  min-height: 130vh;
   background-color: #f7f7f7;
+  /*  Needed for filters */
+  /*  // Needed for filters */
 }
-.bestSelling .title h1 {
-  font-size: 42px;
-  font-family: "Gilroy-Bold";
+.bestSelling .slick-prev:before,
+.bestSelling .slick-next:before {
+  display: none;
+}
+.bestSelling .slick-prev,
+.bestSelling .slick-next {
+  width: 50px;
+  height: 50px;
+  z-index: 5;
+  border-radius: 26px;
+  box-shadow: 0px 7.03125px 19.53125px 0px rgba(0, 0, 0, 0.0588235294);
+}
+.bestSelling .slick-prev {
+  margin-left: 35px;
+  background: white url("../img/slider-arrow-left.svg") no-repeat center;
+}
+.bestSelling .slick-next {
+  margin-right: 35px;
+  background: white url("../img/slider-arrow-right.svg") no-repeat center;
 }
 .bestSelling .products {
-  min-height: 60vh;
+  height: 70vh;
   margin: 4rem 0;
 }
 .bestSelling .products .product-box {
-  margin: 4rem 0;
+  height: 70vh;
+  margin: 3.5rem 21px;
 }
 .bestSelling .products .product-box .p-img {
+  height: 260px;
   background-color: #fafafa;
 }
 .bestSelling .products .product-box .p-img img {
@@ -389,7 +419,7 @@
 }
 .bestSelling .products .product-box .p-content {
   background-color: #ffffff;
-  padding: 1rem 1.5rem;
+  padding: 15px 21px 27px 21px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
@@ -414,35 +444,81 @@
   color: #ffffff;
   border: none;
   background-color: #0d1b39;
+  transition: 0.2s ease-in-out;
+}
+.bestSelling .products .product-box .p-content .price .add-btn:hover {
+  background-color: #e58411;
+  transform: scale(1.1);
+}
+.bestSelling .filters {
+  margin-top: 2rem;
+  background: #EEEEEE;
+  border-radius: 44px;
+  padding: 6px;
+}
+.bestSelling .filters .filter {
+  cursor: pointer;
+  color: #1E1E1E;
+  font-size: 18px;
+  padding: 7px 25px;
+  font-family: "Gilroy-Light";
+  border-radius: 32px;
+  transition: 0.5s ease-in-out;
+  background-color: none;
+}
+.bestSelling .filters .filter.active {
+  background-color: white;
+  font-family: "Gilroy-Regular";
+}
+.bestSelling .hide {
+  /* You can play with the seconds to change the "animation" */
+  animation: hide 0.3s ease 0s 1 normal forwards;
+  transform-origin: center;
+}
+.bestSelling .show {
+  /* You can play with the seconds to change the "animation" */
+  animation: show 0.3s ease 0s 1 normal forwards;
+  transform-origin: center;
+}
+@keyframes hide {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+}
+@keyframes show {
+  0% {
+    transform: scale(0);
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .experiences,
 .materials {
-  min-height: 110vh;
+  min-height: 100vh;
 }
-.experiences .ph-exp .content,
-.materials .ph-exp .content {
+.experiences .title .content,
+.materials .title .content {
   margin-left: 50px;
   margin-top: 5%;
 }
-.experiences .ph-exp span,
-.materials .ph-exp span {
-  font-family: "Gilroy-Semibold";
-  text-transform: uppercase;
-  color: #e58411;
-  letter-spacing: 3px;
-  font-size: 18px;
-}
-.experiences .ph-exp h1,
-.materials .ph-exp h1 {
-  margin: 20px 0;
+.experiences .title .content h1,
+.materials .title .content h1 {
   text-transform: capitalize;
-  font-family: "Gilroy-Bold";
-  font-size: 42px;
   width: 80%;
 }
-.experiences .ph-exp p,
-.materials .ph-exp p {
+.experiences .title .content p,
+.materials .title .content p {
   font-size: 17px;
   color: #1e1e1e;
   opacity: 0.8;
@@ -480,7 +556,7 @@
   border-radius: 20px;
 }
 
-.materials .ph-exp .content {
+.materials .title .content {
   margin-left: 0px;
 }
 .materials .marginr {
@@ -510,12 +586,8 @@
 .testimonials .title h1 {
   margin-bottom: 3rem;
 }
-.testimonials .review-slider {
-  background-color: aqua;
-}
 .testimonials .review-slider .r-box {
-  margin: 0 30px;
-  background-color: red;
+  margin: 0 21px;
   position: relative;
 }
 .testimonials .review-slider .r-box .r-content {
@@ -553,6 +625,28 @@
 }
 .testimonials .review-slider .r-box .r-content ul li i.l-star {
   opacity: 0.3;
+}
+.testimonials .slick-prev:before,
+.testimonials .slick-next:before {
+  display: none;
+}
+.testimonials .slick-prev,
+.testimonials .slick-next {
+  margin-top: -65px;
+  width: 50px;
+  height: 50px;
+  z-index: 5;
+  border-radius: 26px;
+  box-shadow: 0px 7.03125px 19.53125px 0px rgba(0, 0, 0, 0.0588235294);
+  offset: 0px, 7.03px rgba(0, 0, 0, 0.06);
+}
+.testimonials .slick-prev {
+  margin-left: 20px;
+  background: white url("../img/slider-arrow-left.svg") no-repeat center;
+}
+.testimonials .slick-next {
+  margin-right: 20px;
+  background: white url("../img/slider-arrow-right.svg") no-repeat center;
 }
 
 footer {
@@ -616,10 +710,10 @@ footer .f-bottom .right ul li {
   #header .bottomHead .bhContent p {
     font-size: 16px;
   }
-  .experiences .ph-exp h1 {
+  .experiences .title h1 {
     font-size: 30px;
   }
-  .experiences .ph-exp p {
+  .experiences .title p {
     font-size: 15px;
   }
 }
@@ -630,10 +724,10 @@ footer .f-bottom .right ul li {
   #header .bottomHead .bhContent p {
     font-size: 17px;
   }
-  .experiences .ph-exp .content h1 {
+  .experiences .title .content h1 {
     font-size: 33px;
   }
-  .experiences .ph-exp .content p {
+  .experiences .title .content p {
     font-size: 16px;
   }
 }
@@ -649,10 +743,10 @@ footer .f-bottom .right ul li {
     margin: 1.5rem auto;
     text-align: center;
   }
-  .experiences .ph-exp .content h1 {
+  .experiences .title .content h1 {
     font-size: 38px;
   }
-  .experiences .ph-exp .content P {
+  .experiences .title .content P {
     font-size: 16px;
   }
 }
@@ -673,7 +767,7 @@ footer .f-bottom .right ul li {
   .firstSection .title h1 {
     width: 242px;
   }
-  .experiences .ph-exp .content h1 {
+  .experiences .title .content h1 {
     width: 75%;
   }
 }
@@ -708,7 +802,7 @@ footer .f-bottom .right ul li {
   .firstSection .info_box {
     margin: 2rem auto;
   }
-  .materials .ph-exp {
+  .materials .title {
     order: 2;
   }
   .materials .m_gallery {
