@@ -1,74 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Panto</title>
-    <link rel="icon" href="images/icon-top.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="vendors/css/bootstrap .css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="slick/slick.css">
-    <link rel="stylesheet" href="slick/slick-theme.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<header>
-        <div class="container">
-            <div class="top-h">
-                <div class="row justify-content-between align-items-center">
-                    <div class="logo col-2">
-                        <h2>Panto</h2>
-                    </div>
-                    <div class="nav-h col-9">
-                        <ul class="list-unstyled d-flex justify-content-center align-items-center">
-                            <li class="menu-h d-flex align-items-center"><a href="#">Furniture</a> <i class="fa-solid fa-chevron-down"></i>
-                               <ul class="d-menu list-unstyled">
-                                    <li><a href="#">Sofa</a></li>
-                                    <li><a href="#">Beds</a></li>
-                                    <li><a href="#">Chairs</a></li>
-                                    <li><a href="#">Lamp</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Shop</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="col-1 d-flex justify-content-end">
-                        <div class="shop-cart ">
-                            <img src="img/Bag.svg" width="25px" alt="shop-cart"><sup>0</sup>
-                        </div>
-                    </div>
-                </div>
+    <!-- <link rel="icon" href="images/icon-top.png"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="vendors/css/bootstrap .css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="slick/slick.css" />
+    <link rel="stylesheet" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="container">
+        <div class="topHead row align-items-center">
+          <div class="logo col-2">
+            <p>Panto</p>
+          </div>
+          <div class="nav_h col-9">
+            <ul class="list-unstyled c-flex">
+              <li class="menu_h d-flex align-items-center">
+                <a href="#">Furniture</a>
+                <i class="fa-solid fa-chevron-down"></i>
+                <ul class="d_menu list-unstyled">
+                  <li><a href="#">Sofa</a></li>
+                  <li><a href="#">Beds</a></li>
+                  <li><a href="#">Chairs</a></li>
+                  <li><a href="#">Lamp</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="leftSide col-1 d-flex justify-content-end">
+            <div class="shopCart">
+              <img src="img/Bag.svg" width="25px" alt="shop-cart" /><sup>0</sup>
             </div>
-            
-            <div class="bottom-h section-flex">
-                <div class="bh-content">
-                    <h1>Make your interior more minimalistic & modern</h1>
-                    <p>Turn your room with panto into a lot more minimalist <br> and modern with ease and speed</p>
-                    <form action="">
-                        <input class="search-inp" type="search" placeholder="Search furniture" name="" id="">
-                        <i class="fa-sharp fa-solid fa-magnifying-glass search-ico"></i>
-                    </form>
-                    <div class="change-color">
-                        <div class="colors">
-                            <button class="purple"></button>
-                            <button class="purple"></button>
-                            <button class="purple"></button>
-                        </div>
-                        <button class="change-btn"></button>
+            <div class="burgerMenu">
+              <div id="burger-menu">
+                <span></span>
+              </div>
 
-                    </div>
-                </div>
+              <div id="menu">
+                <ul>
+                  <li><a href="#">Furniture</a></li>
+                  <li><a href="#">Shop</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
             </div>
+          </div>
         </div>
-</header>
+      </div>
 
-    <section class="firstSection section-flex">
+      <div class="bottomHead c-flex">
+        <div class="bhContent">
+          <h1>Make your interior more minimalistic & modern</h1>
+          <p>
+            Turn your room with panto into a lot more minimalist <br />
+            and modern with ease and speed
+          </p>
+          <div class="searchBox c-flex">
+            <div
+              class="sbContent d-flex justify-content-between align-items-center"
+            >
+              <input type="text" name="" id="" placeholder="Search furniture" />
+              <a href="##" class="searchIcon c-flex">
+                <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="changeColor" onclick="colors.classList.toggle('showBtns')">
+            <div id="colors">
+              <button class="btnColor" onclick="header.classList.toggle('bg2')"></button>
+              <button class="btnColor" onclick="header.classList.toggle('bg3')"></button>
+              <button class="btnColor" onclick="header.classList.toggle('bg4')"></button>
+            </div>
+            <button class="changeBtn"></button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="firstSection c-flex">
         <div class="container">
             <div class="row fs-box">
                 <div class="title col-lg-3 col-md-12 ">
@@ -93,15 +117,35 @@
         </div>
     </section> 
 
-    <!-- <section class="best-selling section-flex">
+    <section class="bestSelling c-flex">
         <div class="container">
             <div class="title text-center">
                 <h1>Best Selling Product</h1>
             </div>    
-            <div class="b-slider row">
-                <div class="col-3 product-box">
+            <div class="products row justify-content-between">
+                <div class="product-box col-lg-3 col-md-6 col-sm-12">
                     <div class="p-img d-flex justify-content-center">
-                        <img src="img/chair1.png" alt="">
+                        <img width="300px" src="img/sofa1.png" alt="">
+                    </div>
+                    <div class="p-content">
+                        <span>Chair</span>
+                        <h6>Sakarias Armchair</h6>
+                        <ul class="d-flex list-unstyled">
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                        </ul>
+                        <div class="price d-flex justify-content-between align-items-center">
+                            <h5><sup>$</sup> 392</h5>
+                            <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div> 
+                <div class="product-box col-lg-3 col-md-6 col-sm-12">
+                    <div class="p-img d-flex justify-content-center">
+                        <img width="150px" src="img/lamp1.png" alt="">
                     </div>
                     <div class="p-content">
                         <span>Chair</span>
@@ -119,9 +163,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3 product-box">
+                <div class="product-box col-lg-3 col-md-6 col-sm-12">
                     <div class="p-img d-flex justify-content-center">
-                        <img src="img/chair1.png" alt="">
+                        <img width="250px" src="img/table2.png" alt="">
                     </div>
                     <div class="p-content">
                         <span>Chair</span>
@@ -139,9 +183,69 @@
                         </div>
                     </div>
                 </div>
-                <div class=" slide-1 col-3 product-box">
+                <div class="product-box col-lg-3 col-md-6 col-sm-12">
                     <div class="p-img d-flex justify-content-center">
-                        <img src="img/chair1.png" alt="">
+                        <img src="img/chair2.svg" alt="">
+                    </div>
+                    <div class="p-content">
+                        <span>Chair</span>
+                        <h6>Sakarias Armchair</h6>
+                        <ul class="d-flex list-unstyled">
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                        </ul>
+                        <div class="price d-flex justify-content-between align-items-center">
+                            <h5><sup>$</sup> 392</h5>
+                            <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>    
+                <div class="product-box col-lg-3 col-md-6 col-sm-12">
+                    <div class="p-img d-flex justify-content-center">
+                        <img src="img/chair1.svg" alt="">
+                    </div>
+                    <div class="p-content">
+                        <span>Chair</span>
+                        <h6>Sakarias Armchair</h6>
+                        <ul class="d-flex list-unstyled">
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                        </ul>
+                        <div class="price d-flex justify-content-between align-items-center">
+                            <h5><sup>$</sup> 392</h5>
+                            <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>           
+                <div class="product-box col-lg-3 col-md-6 col-sm-12">
+                    <div class="p-img d-flex justify-content-center">
+                        <img width="300px" src="img/bed1.png" alt="">
+                    </div>
+                    <div class="p-content">
+                        <span>Chair</span>
+                        <h6>Sakarias Armchair</h6>
+                        <ul class="d-flex list-unstyled">
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                        </ul>
+                        <div class="price d-flex justify-content-between align-items-center">
+                            <h5><sup>$</sup> 392</h5>
+                            <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>    
+                <div class="product-box col-lg-3 col-md-6 col-sm-12">
+                    <div class="p-img d-flex justify-content-center">
+                        <img width="250px" src="img/table1.png" alt="">
                     </div>
                     <div class="p-content">
                         <span>Chair</span>
@@ -159,9 +263,9 @@
                         </div>
                     </div>
                 </div>
-                <div class=" slide-1 col-3 product-box">
+                <div class="product-box col-lg-3 col-md-6 col-sm-12">
                     <div class="p-img d-flex justify-content-center">
-                        <img src="img/chair1.png" alt="">
+                        <img width="300px" src="img/sofa2.png" alt="">
                     </div>
                     <div class="p-content">
                         <span>Chair</span>
@@ -179,73 +283,14 @@
                         </div>
                     </div>
                 </div>
-                <div class=" slide-1 col-3 product-box">
-                    <div class="p-img d-flex justify-content-center">
-                        <img src="img/chair1.png" alt="">
-                    </div>
-                    <div class="p-content">
-                        <span>Chair</span>
-                        <h6>Sakarias Armchair</h6>
-                        <ul class="d-flex list-unstyled">
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                        </ul>
-                        <div class="price d-flex justify-content-between align-items-center">
-                            <h5><sup>$</sup> 392</h5>
-                            <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class=" slide-1 col-3 product-box">
-                    <div class="p-img d-flex justify-content-center">
-                        <img src="img/chair1.png" alt="">
-                    </div>
-                    <div class="p-content">
-                        <span>Chair</span>
-                        <h6>Sakarias Armchair</h6>
-                        <ul class="d-flex list-unstyled">
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                        </ul>
-                        <div class="price d-flex justify-content-between align-items-center">
-                            <h5><sup>$</sup> 392</h5>
-                            <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class=" slide-1 col-3 product-box">
-                    <div class="p-img d-flex justify-content-center">
-                        <img src="img/chair1.png" alt="">
-                    </div>
-                    <div class="p-content">
-                        <span>Chair</span>
-                        <h6>Sakarias Armchair</h6>
-                        <ul class="d-flex list-unstyled">
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                        </ul>
-                        <div class="price d-flex justify-content-between align-items-center">
-                            <h5><sup>$</sup> 392</h5>
-                            <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
-                        </div>
-                    </div>
-                </div>
-        
+
+                
             </div>
             <div class="view-btn text-center">
                 <a class="info_btn" href="#">View All <img width="40px" src="img/arrow-right.png" alt=""></a>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <section class="experiences">
         <div class="container_m">
@@ -265,62 +310,90 @@
         </div>
     </section>  
 
-        <!-- <section class="materials">
-            <div class="container">
-                <div class="row justify-content-between align-items-center">
-                    <div class="ph-exp col-lg-5 col-12">
-                        <div class="content">
-                            <span>Materials</span>
-                            <h1>Very serious materials for making furniture</h1>
-                            <p>Because panto was very serious about designing furniture for our environment, using a very expensive and famous capital but at a relatively low price</p>
-                            <a class="info_btn" href="#">More info <img width="40px" src="img/arrow-right.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="grid_container col-lg-6 col-12 wow slideInRight d-flex ">   
-                        <div class="item1">
-                            <img class="d-block" width="223px" height="229px" src="img/materials1.png" alt="">
-                            <img width="223px" height="317px" src="img/materials2.png" alt="">
-                        </div>
-
-                        <div class="item3 "><img width="445px" height="445px" src="img/materials3.png" alt=""></div>  
+    <!-- <section class="materials ">
+        <div class="container marginr">
+            <div class="row justify-content-between align-items-center">
+                <div class="ph-exp col-lg-5 col-12">
+                    <div class="content">
+                        <span>Materials</span>
+                        <h1>Very serious materials for making furniture</h1>
+                        <p>Because panto was very serious about designing furniture for our environment, using a very expensive and famous capital but at a relatively low price</p>
+                        <a class="info_btn" href="#">More info <img width="40px" src="img/arrow-right.png" alt=""></a>
                     </div>
                 </div>
-            </div>
-        </section>   -->
+                <div class="m_gallery col-lg-7 col-12 wow slideInRight d-flex align-items-end justify-content-end">   
+                    <div class="m_left">
+                        <img class="d-block" src="img/materials2.png" alt="">
+                        <img  style="margin-top: 40px;"  src="img/materials1.png" alt="">
+                    </div>
 
-    <!-- <section class="testimonials section-flex">
+                    <div class="m_right"><img src="img/materials3.png" alt=""></div>  
+                </div>
+            </div>
+        </div>
+    </section>  -->
+
+    <!-- <section class="testimonials c-flex">
         <div class="container">
             <div class="title text-center">
                 <span>experiences</span>
                 <h1>Our Client Reviews</h1>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-12 review">
-                  <div class="review-box">
-                    <img src="img/Union.png" alt="">
-                    <div class="review-content text-center">
-                        <img width="70px" src="img/userimg1.jpg" alt="">
+                <div class="review-slider">
+                   <div class="r-box">
+                        <img width="100%" height="476px" src="img/card-img1.png" alt="">
+                        <div class="r-content text-center">
+                            <img width="50px" src="img/userimg.svg" alt="">
+                            <h5>Bang Upin</h5>
+                            <h6>Pedagang Asongan</h6>
+                            <p>“Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“</p>
+                            <ul class="d-flex list-unstyled">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                            </ul>
+                        </div>
+                   </div>
+                   <div class="r-box">
+                    <img width="100%" height="476px" src="img/cardimg2.jpg" alt="">
+                    <div class="r-content text-center">
+                        <img  width="50px" src="img/userimg.svg" alt="">
                         <h5>Bang Upin</h5>
                         <h6>Pedagang Asongan</h6>
                         <p>“Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“</p>
-                        <ul class="d-flex list-unstyled">
+                        <ul class="d-flex list-unstyled pb-5">
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star l-star"></i></li>
                         </ul>
                     </div>
-                  </div>
+               </div>
+               <div class="r-box">
+                <img width="100%" height="476px" src="img/cardimg3.jpg" alt="">
+                <div class="r-content text-center">
+                    <img width="50px" src="img/userimg.svg" alt="">
+                    <h5>Bang Upin</h5>
+                    <h6>Pedagang Asongan</h6>
+                    <p>“Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“</p>
+                    <ul class="d-flex list-unstyled">
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                    </ul>
+                </div>
+           </div>
                 </div>
 
             </div>
-        </div>
-    </section> 
-    
-    -->
+    </section> -->
 
-    <footer class="section-flex">
+    <footer class="c-flex">
         <div class="container">
             <div class="f-top">
                 <div class="row justify-content-between">
@@ -368,16 +441,17 @@
                 </div>
             </div>
         </div>
-    </footer> 
-    
-    <div id="scrollToTop">
-        <i class="fas fa-chevron-up"></i>
-    </div>
+    </footer>  
 
-</body>
-    <script src="vendors/js/jquery-3.6.0.min"></script>
-    <script src="slick/slick.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script>new WOW().init();</script>
-    <script src="js/script.js"></script>
+    <div id="scrollToTop">
+      <i class="fas fa-chevron-up"></i>
+    </div>
+  </body>
+  <script src="vendors/js/jquery-3.6.0.min"></script>
+  <script src="slick/slick.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  <script src="js/script.js"></script>
 </html>
