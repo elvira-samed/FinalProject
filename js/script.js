@@ -1,10 +1,31 @@
-$('.b-slider').slick({
+$('.f-slider').slick({
   infinite: true,
   speed: 300,
   slidesToShow: 4,
   slidesToScroll: 4,
-  autoplay: true,
-  autoplaySpeed: 2500,
+  responsive: [
+     {
+       breakpoint: 1200,
+       settings: {
+         slidesToShow: 3,
+         slidesToScroll: 3,
+       }
+     },
+     {
+       breakpoint: 992,
+       settings: {
+         slidesToShow: 2,
+         slidesToScroll: 2
+       }
+     },
+     {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    ]
 });
 
 $('.review-slider').slick({
@@ -49,12 +70,47 @@ scrollElem.onclick=function(){
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-/////
-
+// BURGER MENU
 var burgerMenu = document.getElementById('burger-menu');
 var overlay = document.getElementById('menu');
 burgerMenu.addEventListener('click',function(){
   this.classList.toggle("close");
   overlay.classList.toggle("overlay");
 });
+
+
+// FILTERING
+const filters = document.querySelectorAll('.filter');
+
+filters.forEach(filter => { 
+
+  filter.addEventListener('click', function() {
+    let selectedFilter = filter.getAttribute('data-filter');
+    let itemsToHide = document.querySelectorAll(`.products .product-box:not([data-filter='${selectedFilter}'])`);
+    let itemsToShow = document.querySelectorAll(`.products [data-filter='${selectedFilter}']`);
+    var allFilters = document.querySelectorAll('.filters [data-filter]');
+    
+    if (selectedFilter == 'all') {
+      itemsToHide = [];
+      itemsToShow = document.querySelectorAll('.products [data-filter]');
+    }
+
+    itemsToHide.forEach(el => {
+      el.classList.add('hide');
+      el.classList.remove('show');
+    });
+
+    itemsToShow.forEach(el => {
+      el.classList.remove('hide');
+      el.classList.add('show'); 
+    });
+
+    allFilters.forEach(function(filter) {
+      filter.classList.remove('active');
+    
+    });
+    filter.classList.add('active');
+  });
+});
+
 
