@@ -1,8 +1,9 @@
 $('.f-slider').slick({
-  infinite: false,
+  infinite: true,
   speed: 300,
   slidesToShow: 4,
   slidesToScroll: 4,
+
   responsive: [
      {
        breakpoint: 1200,
@@ -54,31 +55,6 @@ $('.review-slider').slick({
       ]
   });
 
-
-// SCROLL TO TOP 
-var scrollElem = document.getElementById("scrollToTop");
-window.onscroll = function() {
-        if(this.scrollY>400){
-            scrollElem.classList.add("active-elem")
-        }
-        else{
-            scrollElem.classList.remove("active-elem")
-        }
-    }
-
-scrollElem.onclick=function(){
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-// BURGER MENU
-var burgerMenu = document.getElementById('burger-menu');
-var overlay = document.getElementById('menu');
-burgerMenu.addEventListener('click',function(){
-  this.classList.toggle("close");
-  overlay.classList.toggle("overlay");
-});
-
-
 // FILTERING
 const filters = document.querySelectorAll('.filter');
 
@@ -89,7 +65,7 @@ filters.forEach(filter => {
     let itemsToHide = document.querySelectorAll(`.products .product-box:not([data-filter='${selectedFilter}'])`);
     let itemsToShow = document.querySelectorAll(`.products [data-filter='${selectedFilter}']`);
     var allFilters = document.querySelectorAll('.filters [data-filter]');
-    
+
     if (selectedFilter == 'all') {
       itemsToHide = [];
       itemsToShow = document.querySelectorAll('.products [data-filter]');
@@ -111,6 +87,29 @@ filters.forEach(filter => {
     });
     filter.classList.add('active');
   });
+});
+
+// SCROLL TO TOP 
+var scrollElem = document.getElementById("scrollToTop");
+window.onscroll = function() {
+        if(this.scrollY>400){
+            scrollElem.classList.add("active-elem")
+        }
+        else{
+            scrollElem.classList.remove("active-elem")
+        }
+    }
+
+scrollElem.onclick=function(){
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// BURGER MENU
+var burgerMenu = document.getElementById('burger-menu');
+var overlay = document.getElementById('b-menu');
+burgerMenu.addEventListener('click',function(){
+  this.classList.toggle("close");
+  overlay.classList.toggle("overlay");
 });
 
 
