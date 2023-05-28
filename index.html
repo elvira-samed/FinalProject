@@ -5,19 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Panto</title>
-    <link rel="icon" href="img/p-icon.png">
+    <link rel="icon" href="img/p-icon.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="vendors/css/bootstrap .css" />
-    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="vendors/css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="slick/slick.css" />
     <link rel="stylesheet" href="slick/slick-theme.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-     <header id="header">
+    <header id="header">
       <div class="container">
         <div class="topHead row align-items-center">
           <div class="logo col-2">
@@ -40,16 +43,50 @@
               <li><a href="#">Contact</a></li>
             </ul>
           </div>
-          <div class="leftSide col-1 d-flex justify-content-end">
-            <div class="shopCart">
-              <img src="img/Bag.svg" width="25px" alt="shop-cart" /><sup>0</sup>
+          <div class="rightSide col-1 d-flex justify-content-end">
+            <div class="shop-cart">
+              <a
+                href="#"
+                class="shopCart position-relative"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"
+              >
+                <img src="img/Bag.svg" width="25px" alt="shop-cart" /><sup
+                  >0</sup
+                >
+              </a>
+              <div
+                class="offcanvas offc offcanvas-end"
+                tabindex="-1"
+                id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel"
+              >
+                <div
+                  class="offcanvas-header offc-head d-flex justify-content-end"
+                >
+                  <button
+                    type="button"
+                    class="btn-close text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body offc-body c-flex">
+                  <div class="container text-center">
+                    <span>Your cart is currently empty.</span>
+                    <a href="index.html"> CONTINUE SHOPPING </a>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="burgerMenu">
               <div id="burger-menu">
                 <span></span>
+
               </div>
 
-              <div id="menu">
+              <div id="b-menu">
                 <ul>
                   <li><a href="#">Furniture</a></li>
                   <li><a href="#">Shop</a></li>
@@ -73,443 +110,590 @@
             <div
               class="sbContent d-flex justify-content-between align-items-center"
             >
-              <input type="text" name="" id="" placeholder="Search furniture" />
-              <a href="##" class="searchIcon c-flex">
+              <input type="text" placeholder="Search furniture" />
+              <a href="#" class="searchIcon c-flex">
                 <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
               </a>
             </div>
           </div>
 
-          <div class="changeColor" onclick="colors.classList.toggle('showBtns')">
-            <div id="colors">
-              <button class="btnColor" onclick="header.classList.toggle('bg2')"></button>
-              <button class="btnColor" onclick="header.classList.toggle('bg3')"></button>
-              <button class="btnColor" onclick="header.classList.toggle('bg4')"></button>
+          <!-- <div
+            class="sofaColors"
+            onclick="scolors.classList.toggle('showBtns')"
+          >
+            <div id="scolors">
+              <button
+                class="btnColor bc1"
+                onclick="header.classList.toggle('bg2')"
+              ></button>
+              <button
+                class="btnColor"
+                onclick="header.classList.toggle('bg3')"
+              ></button>
+              <button
+                class="btnColor"
+                onclick="header.classList.toggle('bg4')"
+              ></button>
             </div>
-            <button class="changeBtn"></button>
-          </div>
+            <button class="changeBtn1"></button>
+          </div> -->
+
         </div>
       </div>
     </header>
 
     <section class="firstSection c-flex">
-        <div class="container">
-            <div class="row fs-box">
-                <div class="title col-lg-3 col-md-12 ">
-                    <h1>Why Choosing Us</h1>
-                </div>
-                <div class="info_box col-lg-3 col-8 ">
-                    <h4>Luxury facilities</h4>
-                    <p>The advantage of hiring a workspace with us is that givees you comfortable service and all-around facilities.</p>
-                    <a class="info_btn" href="#">More info <img width="40px" src="img/arrow-right.png" alt=""></a>
-                </div>
-                <div class="info_box col-lg-3 col-8 ">
-                    <h4>Affordable Price</h4>
-                    <p>You can get a workspace of the highst quality at an affordable price and still enjoy the facilities that are oly here.</p>
-                    <a class="info_btn" href="#">More info <img width="40px" src="img/arrow-right.png" alt=""></a>
-                </div>
-                <div class="info_box col-lg-3 col-8 ">
-                    <h4>Many Choices</h4>
-                    <p>We provide many unique work space choices so that you can choose the workspace to your liking.</p>
-                    <a class="info_btn" href="#">More info <img width="40px" src="img/arrow-right.png" alt=""></a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row fs-box">
+          <div class="title col-lg-3 col-md-12 wow animate__slideInLeft">
+            <h1>Why Choosing Us</h1>
+          </div>
+          <div class="info_box col-lg-3 col-8 wow animate__zoomIn">
+            <h4>Luxury facilities</h4>
+            <p>
+              The advantage of hiring a workspace with us is that givees you
+              comfortable service and all-around facilities.
+            </p>
+            <a class="info_btn" href="#"
+              >More info <img src="img/arrow-right.png" alt=""
+            /></a>
+          </div>
+          <div class="info_box col-lg-3 col-8 wow animate__zoomIn">
+            <h4>Affordable Price</h4>
+            <p>
+              You can get a workspace of the highst quality at an affordable
+              price and still enjoy the facilities that are oly here.
+            </p>
+            <a class="info_btn" href="#"
+              >More info <img src="img/arrow-right.png" alt=""
+            /></a>
+          </div>
+          <div class="info_box col-lg-3 col-8 wow animate__zoomIn">
+            <h4>Many Choices</h4>
+            <p>
+              We provide many unique work space choices so that you can choose
+              the workspace to your liking.
+            </p>
+            <a class="info_btn" href="#"
+              >More info <img src="img/arrow-right.png" alt=""
+            /></a>
+          </div>
         </div>
-    </section> 
-
-    <section class="bestSelling c-flex">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class=" col-12 title text-center">
-                    <h1>Best Selling Product</h1>
-                </div>    
-                    <ul class="filters list-unstyled d-flex justify-content-between align-items-center col-xl-5 col-lg-6 col-md-8 col-11">
-                        <li class="filter active" data-filter="all">All</li>
-                        <li class="filter" data-filter="chair">Chairs</li>
-                        <li class="filter" data-filter="table">Tables</li>
-                        <li class="filter" data-filter="sofa">Sofas</li>
-                        <li class="filter" data-filter="lamp">Lamps</li>
-                    </ul>
-                <div class="col-12 f-slider products row justify-content-between">
-                    <div class="product-box col-lg-3 col-md-6 col-sm-12" data-filter="sofa">
-                        <div class="p-img d-flex justify-content-center">
-                            <img width="300px" height="200px" src="img/sofa1.png" alt="">
-                        </div>
-                        <div class="p-content">
-                            <span>Sofa</span>
-                            <h6>Large White Sofa</h6>
-                            <ul class="d-flex list-unstyled">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                            </ul>
-                            <div class="price d-flex justify-content-between align-items-center">
-                                <h5><sup>$</sup> 392.00</h5>
-                                <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="product-box col-lg-3 col-md-6 col-sm-12" data-filter="lamp">
-                        <div class="p-img d-flex justify-content-center">
-                            <img width="150px" src="img/lamp1.png" alt="">
-                        </div>
-                        <div class="p-content">
-                            <span>Lamp</span>
-                            <h6>Table Lamp</h6>
-                            <ul class="d-flex list-unstyled">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                            </ul>
-                            <div class="price d-flex justify-content-between align-items-center">
-                                <h5><sup>$</sup> 94.99</h5>
-                                <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>    
-                    <div class="product-box col-lg-3 col-md-6 col-sm-12" data-filter="table">
-                        <div class="p-img d-flex justify-content-center">
-                            <img width="250px" src="img/table2.png" alt="">
-                        </div>
-                        <div class="p-content">
-                            <span>Table</span>
-                            <h6>Dining Table</h6>
-                            <ul class="d-flex list-unstyled">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                            </ul>
-                            <div class="price d-flex justify-content-between align-items-center">
-                                <h5><sup>$</sup> 118.90</h5>
-                                <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-box col-lg-3 col-md-6 col-sm-12" data-filter="chair">
-                        <div class="p-img d-flex justify-content-center">
-                            <img src="img/chair2.svg" alt="">
-                        </div>
-                        <div class="p-content">
-                            <span>Chair</span>
-                            <h6>Sakarias Armchair</h6>
-                            <ul class="d-flex list-unstyled">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                            </ul>
-                            <div class="price d-flex justify-content-between align-items-center">
-                                <h5><sup>$</sup> 75.00</h5>
-                                <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>             
-                    <div class="product-box col-lg-3 col-md-6 col-sm-12" data-filter="sofa">
-                        <div class="p-img d-flex justify-content-center">
-                            <img width="300px" src="img/sofa3.png" alt="">
-                        </div>
-                        <div class="p-content">
-                            <span>Sofa</span>
-                            <h6>Rose Sofa</h6>
-                            <ul class="d-flex list-unstyled">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                            </ul>
-                            <div class="price d-flex justify-content-between align-items-center">
-                                <h5><sup>$</sup> 280.00</h5>
-                                <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-box col-lg-3 col-md-6 col-sm-12" data-filter="lamp">
-                        <div class="p-img d-flex justify-content-center">
-                            <img width="150px" src="img/lamp2.png" alt="">
-                        </div>
-                        <div class="p-content">
-                            <span>Lamp</span>
-                            <h6>Floor Lamp</h6>
-                            <ul class="d-flex list-unstyled">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                            </ul>
-                            <div class="price d-flex justify-content-between align-items-center">
-                                <h5><sup>$</sup> 125.99</h5>
-                                <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>    
-                    <div class="product-box col-lg-3 col-md-6 col-sm-12" data-filter="table">
-                        <div class="p-img d-flex justify-content-center">
-                            <img width="250px" src="img/table1.png" alt="">
-                        </div>
-                        <div class="p-content">
-                            <span>Table</span>
-                            <h6>Round Dining Table</h6>
-                            <ul class="d-flex list-unstyled">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                            </ul>
-                            <div class="price d-flex justify-content-between align-items-center">
-                                <h5><sup>$</sup> 56.00</h5>
-                                <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-box col-lg-3 col-md-6 col-sm-12" data-filter="chair">
-                        <div class="p-img d-flex justify-content-center">
-                            <img src="img/chair1.svg" alt="">
-                        </div>
-                        <div class="p-content">
-                            <span>Chair</span>
-                            <h6>Baltsar Chair</h6>
-                            <ul class="d-flex list-unstyled">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                            </ul>
-                            <div class="price d-flex justify-content-between align-items-center">
-                                <h5><sup>$</sup> 89.99</h5>
-                                <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>     
-                    <div class="product-box col-lg-3 col-md-6 col-sm-12" data-filter="sofa">
-                        <div class="p-img d-flex justify-content-center">
-                            <img width="300px" height="200px" src="img/sofa2.png" alt="">
-                        </div>
-                        <div class="p-content">
-                            <span>Sofa</span>
-                            <h6>Sakarias Sofa</h6>
-                            <ul class="d-flex list-unstyled">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                            </ul>
-                            <div class="price d-flex justify-content-between align-items-center">
-                                <h5><sup>$</sup> 478.00</h5>
-                                <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="product-box col-lg-3 col-md-6 col-sm-12" data-filter="lamp">
-                        <div class="p-img d-flex justify-content-center">
-                            <img width="150px" src="img/lamp3.png" alt="">
-                        </div>
-                        <div class="p-content">
-                            <span>Lamp</span>
-                            <h6>Vintage Table Lamp</h6>
-                            <ul class="d-flex list-unstyled">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                            </ul>
-                            <div class="price d-flex justify-content-between align-items-center">
-                                <h5><sup>$</sup> 125.00</h5>
-                                <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>    
-                    <div class="product-box col-lg-3 col-md-6 col-sm-12" data-filter="table">
-                        <div class="p-img d-flex justify-content-center">
-                            <img width="250px" src="img/table3.jpeg" alt="">
-                        </div>
-                        <div class="p-content">
-                            <span>Table</span>
-                            <h6>Black Table</h6>
-                            <ul class="d-flex list-unstyled">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                            </ul>
-                            <div class="price d-flex justify-content-between align-items-center">
-                                <h5><sup>$</sup> 92.90</h5>
-                                <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-box col-lg-3 col-md-6 col-sm-12" data-filter="chair">
-                        <div class="p-img d-flex justify-content-center">
-                            <img width="300px" src="img/chair4.svg" alt="">
-                        </div>
-                        <div class="p-content">
-                            <span>Chair</span>
-                            <h6>Anjay Chair</h6>
-                            <ul class="d-flex list-unstyled">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                            </ul>
-                            <div class="price d-flex justify-content-between align-items-center">
-                                <h5><sup>$</sup> 89.99</h5>
-                                <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-box col-lg-3 col-md-6 col-sm-12" data-filter="sofa">
-                        <div class="p-img d-flex justify-content-center">
-                            <img width="300px" src="img/sofa4.png" alt="">
-                        </div>
-                        <div class="p-content">
-                            <span>Sofa</span>
-                            <h6>Yellow Sofa</h6>
-                            <ul class="d-flex list-unstyled">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                            </ul>
-                            <div class="price d-flex justify-content-between align-items-center">
-                                <h5><sup>$</sup> 289.99</h5>
-                                <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-box col-lg-3 col-md-6 col-sm-12" data-filter="lamp">
-                        <div class="p-img d-flex justify-content-center">
-                            <img width="150px" src="img/lamp4.png" alt="">
-                        </div>
-                        <div class="p-content">
-                            <span>Lamp</span>
-                            <h6>Vloerlamp Industrieel</h6>
-                            <ul class="d-flex list-unstyled">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                            </ul>
-                            <div class="price d-flex justify-content-between align-items-center">
-                                <h5><sup>$</sup> 252.00</h5>
-                                <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>    
-                    <div class="product-box col-lg-3 col-md-6 col-sm-12" data-filter="table">
-                        <div class="p-img d-flex justify-content-center">
-                            <img width="250px" src="img/table4.png" alt="">
-                        </div>
-                        <div class="p-content">
-                            <span>Table</span>
-                            <h6>Dining Table</h6>
-                            <ul class="d-flex list-unstyled">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                            </ul>
-                            <div class="price d-flex justify-content-between align-items-center">
-                                <h5><sup>$</sup> 99.00</h5>
-                                <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-box col-lg-3 col-md-6 col-sm-12" data-filter="chair">
-                        <div class="p-img d-flex justify-content-center">
-                            <img width="300px" src="img/chair3.svg" alt="">
-                        </div>
-                        <div class="p-content">
-                            <span>Chair</span>
-                            <h6>Nyantuy Chair</h6>
-                            <ul class="d-flex list-unstyled">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                            </ul>
-                            <div class="price d-flex justify-content-between align-items-center">
-                                <h5><sup>$</sup> 78.90</h5>
-                                <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 view-btn text-center">
-                    <a class="info_btn" href="#">View All <img width="40px" src="img/arrow-right.png" alt=""></a>
-                </div>
-            </div>
-           
-        </div>
+      </div>
     </section>
 
-    <section class="experiences c-flex">
-        <div class="container_m">
-            <div class="row justify-content-between">
-                <div class="left-exp col-lg-6 col-md-7 col-12 wow slideInLeft p-0">  
-                    <img width="88%" height="445px" src="./img/exp-bg.png" alt="">     
+    <section class="bestSelling c-flex">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 title text-center wow animate__slideInLeft">
+            <h1>Best Selling Product</h1>
+          </div>
+          <ul
+            class="filters list-unstyled d-flex justify-content-between align-items-center flex-wrap"
+          >
+            <li class="filter active" data-filter="all">All</li>
+            <li class="filter" data-filter="chair">Chairs</li>
+            <li class="filter" data-filter="table">Tables</li>
+            <li class="filter" data-filter="sofa">Sofas</li>
+            <li class="filter" data-filter="lamp">Lamps</li>
+          </ul>
+          <div class="col-12 f-slider products row justify-content-between">
+            <div
+              class="product-box col-lg-3 col-md-6 col-sm-12"
+              data-filter="sofa"
+            >
+              <div class="p-img d-flex justify-content-center">
+                <img width="320px" src="img/sofa4.png" alt="" />
+              </div>
+              <div class="p-content">
+                <span>Sofa</span>
+                <h6>Yellow Sofa</h6>
+                <ul class="d-flex list-unstyled">
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                </ul>
+                <div
+                  class="price d-flex justify-content-between align-items-center"
+                >
+                  <h5><sup>$</sup> 289.99</h5>
+                  <button class="add-btn">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
                 </div>
-                <div class="title col-lg-6 col-md-5 col-12">
-                    <div class="content">
-                        <span>experiences</span>
-                        <h1>we provide you the best experience</h1>
-                        <p>You don’t have to worry about the result because all of these interiors are made by people who are professionals in their fields with an elegant and lucurious style and with premium quality materials</p>
-                        <a class="info_btn" href="#">More info <img width="40px" src="img/arrow-right.png" alt=""></a>
-                    </div>
-                </div>
+              </div>
             </div>
-        </div>
-    </section>  
-
-    <section class="materials c-flex">
-        <div class="container marginr">
-            <div class="row justify-content-between align-items-center">
-                <div class="title col-lg-5 col-12">
-                    <div class="content">
-                        <span>Materials</span>
-                        <h1>Very serious materials for making furniture</h1>
-                        <p>Because panto was very serious about designing furniture for our environment, using a very expensive and famous capital but at a relatively low price</p>
-                        <a class="info_btn" href="#">More info <img width="40px" src="img/arrow-right.png" alt=""></a>
-                    </div>
+            <div
+              class="product-box col-lg-3 col-md-6 col-sm-12 "
+              data-filter="lamp"
+            >
+              <div class="p-img d-flex justify-content-center">
+                <img width="150px" src="img/lamp1.png" alt="" />
+              </div>
+              <div class="p-content">
+                <span>Lamp</span>
+                <h6>Table Lamp</h6>
+                <ul class="d-flex list-unstyled">
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                </ul>
+                <div
+                  class="price d-flex justify-content-between align-items-center"
+                >
+                  <h5><sup>$</sup> 94.99</h5>
+                  <button class="add-btn">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
                 </div>
-                <div class="m_gallery col-lg-7 col-12 wow slideInRight d-flex align-items-end justify-content-end">   
-                    <div class="m_left">
-                        <img class="d-block" src="img/materials2.png" alt="">
-                        <img  style="margin-top: 40px;"  src="img/materials1.png" alt="">
-                    </div>
-
-                    <div class="m_right"><img src="img/materials3.png" alt=""></div>  
-                </div>
+              </div>
             </div>
+            <div
+              class="product-box col-lg-3 col-md-6 col-sm-12 "
+              data-filter="table"
+            >
+              <div class="p-img d-flex justify-content-center">
+                <img width="250px" src="img/table2.png" alt="" />
+              </div>
+              <div class="p-content">
+                <span>Table</span>
+                <h6>Dining Table</h6>
+                <ul class="d-flex list-unstyled">
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                </ul>
+                <div
+                  class="price d-flex justify-content-between align-items-center"
+                >
+                  <h5><sup>$</sup> 118.90</h5>
+                  <button class="add-btn">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="product-box col-lg-3 col-md-6 col-sm-12 "
+              data-filter="chair"
+            >
+              <div class="p-img d-flex justify-content-center">
+                <img src="img/chair2.svg" alt="" />
+              </div>
+              <div class="p-content">
+                <span>Chair</span>
+                <h6>Sakarias Armchair</h6>
+                <ul class="d-flex list-unstyled">
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                </ul>
+                <div
+                  class="price d-flex justify-content-between align-items-center"
+                >
+                  <h5><sup>$</sup> 75.00</h5>
+                  <button class="add-btn">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="product-box col-lg-3 col-md-6 col-sm-12 "
+              data-filter="sofa"
+            >
+              <div class="p-img d-flex justify-content-center">
+                <img width="300px" src="img/sofa3.png" alt="" />
+              </div>
+              <div class="p-content">
+                <span>Sofa</span>
+                <h6>Rose Sofa</h6>
+                <ul class="d-flex list-unstyled">
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                </ul>
+                <div
+                  class="price d-flex justify-content-between align-items-center"
+                >
+                  <h5><sup>$</sup> 280.00</h5>
+                  <button class="add-btn">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="product-box col-lg-3 col-md-6 col-sm-12 "
+              data-filter="lamp"
+            >
+              <div class="p-img d-flex justify-content-center">
+                <img width="150px" src="img/lamp2.png" alt="" />
+              </div>
+              <div class="p-content">
+                <span>Lamp</span>
+                <h6>Floor Lamp</h6>
+                <ul class="d-flex list-unstyled">
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                </ul>
+                <div
+                  class="price d-flex justify-content-between align-items-center"
+                >
+                  <h5><sup>$</sup> 125.99</h5>
+                  <button class="add-btn">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="product-box col-lg-3 col-md-6 col-sm-12 "
+              data-filter="table"
+            >
+              <div class="p-img d-flex justify-content-center">
+                <img width="250px" src="img/table1.png" alt="" />
+              </div>
+              <div class="p-content">
+                <span>Table</span>
+                <h6>Round Dining Table</h6>
+                <ul class="d-flex list-unstyled">
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                </ul>
+                <div
+                  class="price d-flex justify-content-between align-items-center"
+                >
+                  <h5><sup>$</sup> 56.00</h5>
+                  <button class="add-btn">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="product-box col-lg-3 col-md-6 col-sm-12"
+              data-filter="chair"
+            >
+              <div class="p-img d-flex justify-content-center">
+                <img src="img/chair1.svg" alt="" />
+              </div>
+              <div class="p-content">
+                <span>Chair</span>
+                <h6>Baltsar Chair</h6>
+                <ul class="d-flex list-unstyled">
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                </ul>
+                <div
+                  class="price d-flex justify-content-between align-items-center"
+                >
+                  <h5><sup>$</sup> 89.99</h5>
+                  <button class="add-btn">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="product-box col-lg-3 col-md-6 col-sm-12 "
+              data-filter="sofa"
+            >
+              <div class="p-img d-flex justify-content-center">
+                <img width="250px" src="img/sofa2.png" alt="" />
+              </div>
+              <div class="p-content">
+                <span>Sofa</span>
+                <h6>Sakarias Sofa</h6>
+                <ul class="d-flex list-unstyled">
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                </ul>
+                <div
+                  class="price d-flex justify-content-between align-items-center"
+                >
+                  <h5><sup>$</sup> 478.00</h5>
+                  <button class="add-btn">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="product-box col-lg-3 col-md-6 col-sm-12"
+              data-filter="lamp"
+            >
+              <div class="p-img d-flex justify-content-center">
+                <img width="150px" src="img/lamp3.png" alt="" />
+              </div>
+              <div class="p-content">
+                <span>Lamp</span>
+                <h6>Vintage Table Lamp</h6>
+                <ul class="d-flex list-unstyled">
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                </ul>
+                <div
+                  class="price d-flex justify-content-between align-items-center"
+                >
+                  <h5><sup>$</sup> 125.00</h5>
+                  <button class="add-btn">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="product-box col-lg-3 col-md-6 col-sm-12"
+              data-filter="table"
+            >
+              <div class="p-img d-flex justify-content-center">
+                <img width="250px" src="img/table3.jpeg" alt="" />
+              </div>
+              <div class="p-content">
+                <span>Table</span>
+                <h6>Black Table</h6>
+                <ul class="d-flex list-unstyled">
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                </ul>
+                <div
+                  class="price d-flex justify-content-between align-items-center"
+                >
+                  <h5><sup>$</sup> 92.90</h5>
+                  <button class="add-btn">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="product-box col-lg-3 col-md-6 col-sm-12 "
+              data-filter="chair"
+            >
+              <div class="p-img d-flex justify-content-center">
+                <img width="300px" src="img/chair4.svg" alt="" />
+              </div>
+              <div class="p-content">
+                <span>Chair</span>
+                <h6>Anjay Chair</h6>
+                <ul class="d-flex list-unstyled">
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                </ul>
+                <div
+                  class="price d-flex justify-content-between align-items-center"
+                >
+                  <h5><sup>$</sup> 89.99</h5>
+                  <button class="add-btn">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="product-box col-lg-3 col-md-6 col-sm-12 "
+              data-filter="sofa"
+            >
+              <div class="p-img d-flex justify-content-center">
+                <img width="300px" src="img/sofa1.png" alt="" />
+              </div>
+              <div class="p-content">
+                <span>Sofa</span>
+                <h6>Large White Sofa</h6>
+                <ul class="d-flex list-unstyled">
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                </ul>
+                <div
+                  class="price d-flex justify-content-between align-items-center"
+                >
+                  <h5><sup>$</sup> 392.00</h5>
+                  <button class="add-btn">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="product-box col-lg-3 col-md-6 col-sm-12 "
+              data-filter="lamp"
+            >
+              <div class="p-img d-flex justify-content-center">
+                <img width="150px" src="img/lamp4.png" alt="" />
+              </div>
+              <div class="p-content">
+                <span>Lamp</span>
+                <h6>Vloerlamp Industrieel</h6>
+                <ul class="d-flex list-unstyled">
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                </ul>
+                <div
+                  class="price d-flex justify-content-between align-items-center"
+                >
+                  <h5><sup>$</sup> 252.00</h5>
+                  <button class="add-btn">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="product-box col-lg-3 col-md-6 col-sm-12 "
+              data-filter="table"
+            >
+              <div class="p-img d-flex justify-content-center">
+                <img width="250px" src="img/table4.png" alt="" />
+              </div>
+              <div class="p-content">
+                <span>Table</span>
+                <h6>Dining Table</h6>
+                <ul class="d-flex list-unstyled">
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                </ul>
+                <div
+                  class="price d-flex justify-content-between align-items-center"
+                >
+                  <h5><sup>$</sup> 99.00</h5>
+                  <button class="add-btn">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="product-box col-lg-3 col-md-6 col-sm-12 "
+              data-filter="chair"
+            >
+              <div class="p-img d-flex justify-content-center">
+                <img width="300px" src="img/chair3.svg" alt="" />
+              </div>
+              <div class="p-content">
+                <span>Chair</span>
+                <h6>Nyantuy Chair</h6>
+                <ul class="d-flex list-unstyled">
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                </ul>
+                <div
+                  class="price d-flex justify-content-between align-items-center"
+                >
+                  <h5><sup>$</sup> 78.90</h5>
+                  <button class="add-btn">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 text-center">
+            <a class="info_btn" href="#"
+              >View All <img width="40px" src="img/arrow-right.png" alt=""
+            /></a>
+          </div>
         </div>
-    </section>  
+      </div>
+    </section>
+
+    <section class="experiences">
+      <div class="left-exp wow animate__slideInLeft">
+        <img width="88%" height="445px" src="./img/exp-bg.png" alt="" />
+      </div>
+      <div class="title wow animate__slideInRight">
+        <div class="content">
+          <span>experiences</span>
+          <h1>we provide you the best experience</h1>
+          <p>
+            You don’t have to worry about the result because all of these
+            interiors are made by people who are professionals in their fields
+            with an elegant and lucurious style and with premium quality
+            materials
+          </p>
+          <a class="info_btn" href="#"
+            >More info <img width="40px" src="img/arrow-right.png" alt=""
+          /></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="materials">
+      <div class="title wow animate__slideInLeft">
+        <div class="content">
+          <span>Materials</span>
+          <h1>Very serious materials for making furniture</h1>
+          <p>
+            Because panto was very serious about designing furniture for our
+            environment, using a very expensive and famous capital but at a
+            relatively low price
+          </p>
+          <a class="info_btn" href="#"
+            >More info <img width="40px" src="img/arrow-right.png" alt=""
+          /></a>
+        </div>
+      </div>
+      <div class="m_gallery wow animate__slideInRight e-flex">
+        <div class="m_left">
+          <img class="d-block" src="img/materials2.png" alt="" />
+          <img style="margin-top: 40px" src="img/materials1.png" alt="" />
+        </div>
+        <div class="m_right"><img src="img/materials3.png" alt="" /></div>
+      </div>
+    </section>
 
     <section class="testimonials c-flex">
       <div class="container">
-        <div class="title text-center">
+        <div class="title text-center wow animate__slideInLeft">
           <span>experiences</span>
           <h1>Our Client Reviews</h1>
         </div>
         <div class="review-slider">
-          <div class="r-box">
-            <img width="100%" height="476px" src="img/card-img1.png" alt="" />
+          <div class="r-box wow animate__zoomIn">
+            <img class="cd-img" width="100%" height="476px" src="img/cardimg1.jpg" alt="" />
             <div class="r-content text-center">
               <img width="50px" src="img/userimg.svg" alt="" />
               <h5>Bang Upin</h5>
@@ -527,17 +711,16 @@
               </ul>
             </div>
           </div>
-          <div class="r-box">
-            <img width="100%" height="476px" src="img/cardimg2.jpg" alt="" />
+          <div class="r-box wow animate__zoomIn">
+            <img class="cd-img" width="100%" height="476px" src="img/cardimg2.jpg" alt="" />
             <div class="r-content text-center">
-              <img width="50px" src="img/userimg.svg" alt="" />
-              <h5>Bang Upin</h5>
-              <h6>Pedagang Asongan</h6>
+              <img width="50px" src="img/userimg1.svg" alt="" />
+              <h5>Ibuk Sukijan</h5>
+              <h6>Ibu Rumah Tangga</h6>
               <p>
-                “Terimakasih banyak, kini ruanganku menjadi lebih mewah dan
-                terlihat mahal“
+                “Makasih Panto, aku berasa tinggal di apartment karena barang yang mewah“
               </p>
-              <ul class="d-flex list-unstyled pb-5">
+              <ul class="d-flex list-unstyled">
                 <li><i class="fa-solid fa-star"></i></li>
                 <li><i class="fa-solid fa-star"></i></li>
                 <li><i class="fa-solid fa-star"></i></li>
@@ -546,8 +729,26 @@
               </ul>
             </div>
           </div>
-          <div class="r-box">
-            <img width="100%" height="476px" src="img/cardimg3.jpg" alt="" />
+          <div class="r-box wow animate__zoomIn">
+            <img class="cd-img" width="100%" height="476px" src="img/cardimg3.jpg" alt="" />
+            <div class="r-content text-center">
+              <img width="50px" src="img/userimg2.svg" alt="" />
+              <h5>Mpok Ina</h5>
+              <h6>Karyawan Swasta</h6>
+              <p>
+                “Sangat terjangkau untuk kantong saya yang tidak terlalu banyak“
+              </p>
+              <ul class="d-flex list-unstyled">
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star "></i></li>
+                <li><i class="fa-solid fa-star l-star"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="r-box wow animate__zoomIn">
+            <img class="cd-img" width="100%" height="476px" src="img/cardimg1.jpg" alt="" />
             <div class="r-content text-center">
               <img width="50px" src="img/userimg.svg" alt="" />
               <h5>Bang Upin</h5>
@@ -565,36 +766,16 @@
               </ul>
             </div>
           </div>
-          <div class="r-box">
-            <img width="100%" height="476px" src="img/card-img1.png" alt="" />
+          <div class="r-box wow animate__zoomIn">
+            <img class="cd-img" width="100%" height="476px" src="img/cardimg2.jpg" alt="" />
             <div class="r-content text-center">
-              <img width="50px" src="img/userimg.svg" alt="" />
-              <h5>Bang Upin</h5>
-              <h6>Pedagang Asongan</h6>
+              <img width="50px" src="img/userimg1.svg" alt="" />
+              <h5>Ibuk Sukijan</h5>
+              <h6>Ibu Rumah Tangga</h6>
               <p>
-                “Terimakasih banyak, kini ruanganku menjadi lebih mewah dan
-                terlihat mahal“
+                “Makasih Panto, aku berasa tinggal di apartment karena barang yang mewah“
               </p>
               <ul class="d-flex list-unstyled">
-                <li><i class="fa-solid fa-star"></i></li>
-                <li><i class="fa-solid fa-star"></i></li>
-                <li><i class="fa-solid fa-star"></i></li>
-                <li><i class="fa-solid fa-star"></i></li>
-                <li><i class="fa-solid fa-star"></i></li>
-              </ul>
-            </div>
-          </div>
-          <div class="r-box">
-            <img width="100%" height="476px" src="img/cardimg2.jpg" alt="" />
-            <div class="r-content text-center">
-              <img width="50px" src="img/userimg.svg" alt="" />
-              <h5>Bang Upin</h5>
-              <h6>Pedagang Asongan</h6>
-              <p>
-                “Terimakasih banyak, kini ruanganku menjadi lebih mewah dan
-                terlihat mahal“
-              </p>
-              <ul class="d-flex list-unstyled pb-5">
                 <li><i class="fa-solid fa-star"></i></li>
                 <li><i class="fa-solid fa-star"></i></li>
                 <li><i class="fa-solid fa-star"></i></li>
@@ -603,22 +784,21 @@
               </ul>
             </div>
           </div>
-          <div class="r-box">
-            <img width="100%" height="476px" src="img/cardimg3.jpg" alt="" />
+          <div class="r-box wow animate__zoomIn">
+            <img class="cd-img" width="100%" height="476px" src="img/cardimg3.jpg" alt="" />
             <div class="r-content text-center">
-              <img width="50px" src="img/userimg.svg" alt="" />
-              <h5>Bang Upin</h5>
-              <h6>Pedagang Asongan</h6>
+              <img width="50px" src="img/userimg2.svg" alt="" />
+              <h5>Mpok Ina</h5>
+              <h6>Karyawan Swasta</h6>
               <p>
-                “Terimakasih banyak, kini ruanganku menjadi lebih mewah dan
-                terlihat mahal“
+                “Sangat terjangkau untuk kantong saya yang tidak terlalu banyak“
               </p>
               <ul class="d-flex list-unstyled">
                 <li><i class="fa-solid fa-star"></i></li>
                 <li><i class="fa-solid fa-star"></i></li>
                 <li><i class="fa-solid fa-star"></i></li>
-                <li><i class="fa-solid fa-star"></i></li>
-                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star "></i></li>
+                <li><i class="fa-solid fa-star l-star"></i></li>
               </ul>
             </div>
           </div>
@@ -626,18 +806,18 @@
       </div>
     </section>
 
-    <footer class="c-flex">
+    <footer class="e-flex">
       <div class="container">
         <div class="f-top">
           <div class="row justify-content-between">
-            <div class="col-lg-4 col-sm-12 col-12">
+            <div class="f-left col-lg-4 col-sm-12 col-12 wow animate__zoomIn">
               <h3>Panto</h3>
               <p>
                 The advantage of hiring a workspace with us is that givees you
                 comfortable service and all-around facilities.
               </p>
             </div>
-            <div class="col-lg-2 col-sm-4 col-12">
+            <div class="col-lg-2 col-sm-4 col-12 wow animate__zoomIn">
               <ul>
                 <li class="f-title">Services</li>
                 <li><a href="#">Email Marketing</a></li>
@@ -645,7 +825,7 @@
                 <li><a href="#">Branding</a></li>
               </ul>
             </div>
-            <div class="col-lg-2 col-sm-4 col-12">
+            <div class="col-lg-2  col-sm-4 col-12 wow animate__zoomIn">
               <ul>
                 <li class="f-title">Furniture</li>
                 <li><a href="#">Beds</a></li>
@@ -653,20 +833,18 @@
                 <li><a href="#">All</a></li>
               </ul>
             </div>
-            <div class="col-lg-2 col-sm-4 col-12">
+            <div class="col-lg-2  col-sm-4 col-12 wow animate__zoomIn">
               <ul>
                 <li class="f-title">Follow Us</li>
                 <li>
-                  <i class="fa-brands fa-facebook-f"></i
-                  ><a href="#"> Facebook</a>
+                  <a href="#"> <i class="fa-brands fa-facebook-f"></i
+                    >Facebook</a>
                 </li>
                 <li>
-                  <i class="fa-brands fa-twitter" style="margin-right: 5px"></i
-                  ><a href="#"> Twitter</a>
+                  <a href="#"> <i class="fa-brands fa-twitter" style="margin-right: 5px"></i> Twitter</a>
                 </li>
                 <li>
-                  <i class="fa-brands fa-instagram"></i
-                  ><a href="#">Instagram</a>
+                   <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
                 </li>
               </ul>
             </div>
@@ -674,10 +852,10 @@
         </div>
         <div class="f-bottom">
           <div class="row justify-content-between">
-            <div class="left col-2">
-              <span>Copyright © 2021</span>
+            <div class="left col-2 wow animate__slideInLeft">
+              <span>Copyright © 2023</span>
             </div>
-            <div class="right col-4">
+            <div class="right col-4 wow animate__slideInRight">
               <ul class="d-flex justify-content-end align-items-center">
                 <li>Terms & Conditions</li>
                 <li>Privacy Policy</li>
@@ -691,13 +869,28 @@
     <div id="scrollToTop">
       <i class="fas fa-chevron-up"></i>
     </div>
+
   </body>
+
   <script src="vendors/js/jquery-3.6.0.min"></script>
+  <script src="vendors/js/bootstrap.bundle.js"></script>
   <script src="slick/slick.min.js"></script>
-  <script src="js/wow.min.js"></script>
+  <script src="WOW-master/dist/wow.min.js"></script>
   <script>
-    new WOW().init();
+    new WOW({
+      boxClass: "wow", // animated element css class (default is wow)
+      animateClass: "animate__animated", // animation css class (default is animated)
+      offset: 0, // distance to the element when triggering the animation (default is 0)
+      mobile: true, // trigger animations on mobile devices (default is true)
+      live: true, // act on asynchronously loaded content (default is true)
+      callback: function (box) {
+        // the callback is fired every time an animation is started
+        // the argument that is passed in is the DOM node being animated
+      },
+      scrollContainer: null, // optional scroll container selector, otherwise use window,
+      resetAnimation: true, // reset animation on end (default is true)
+    }).init();
   </script>
   <script src="js/script.js"></script>
-</html>
 
+</html>
