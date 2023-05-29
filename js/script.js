@@ -46,7 +46,7 @@ $('.review-slider').slick({
           }
         },
         {
-          breakpoint: 600,
+          breakpoint: 768,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1
@@ -111,4 +111,5 @@ burgerMenu.addEventListener('click',function(){
   this.classList.toggle("close");
   overlay.classList.toggle("overlay");
 });
+
 
